@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "quickscript"
+name = "qscript"
 version = "0.1.0"
