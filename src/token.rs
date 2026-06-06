@@ -37,7 +37,6 @@ pub enum TokenType {
     LtOrEq, // >= <=
 
     Eq,  // ==
-    NEq, // !=
 
     Pipe,     // |
     PipePipe, // ||
@@ -54,3 +53,35 @@ pub struct Token {
     pub size: usize,
     pub line: usize,
 }
+
+pub enum Op {
+    // Arithmetic Ops
+    Plus,
+    PlusAssign,
+    Minus,
+    MinusAssign, // + -
+    Star,
+    StarAssign,
+    Slash,
+    SlashAssign, // * /
+
+    Assign, // =
+
+    // Comparators
+    Bang,      // !
+    BangEqual, // !=
+
+    Gt,
+    Lt, // > <
+    GtOrEq,
+    LtOrEq, // >= <=
+
+    Eq,  // ==
+
+    Pipe,     // |
+    PipePipe, // ||
+
+    Amp,    // &
+    AmpAmp, // &&
+}
+

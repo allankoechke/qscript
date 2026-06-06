@@ -42,6 +42,12 @@ impl Lexer {
             let token = self.tokenize();
             tokens.push(token);
         }
+
+        // Reset the lexer state for potential reuse
+        self.pos = 0;
+        self.line = 1;
+        self.col = 0;
+        
         tokens
     }
 
